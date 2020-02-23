@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Swiftea
  * Plugin URI: https://swifteasearch.alwaysdata.net
@@ -8,4 +9,38 @@
  * Author URI: https://swifteasearch.alwaysdata.net
  */
 
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+// Security
+
+defined('ABSPATH') or die('No script kiddies please!');
+
+// Admin page
+
+add_action('admin_menu', 'setup_menu');
+
+function setup_menu()
+{
+    add_menu_page('Swiftea', 'Swiftea', 'manage_options', 'swiftea', 'init_admin', 'dashicons-search');
+}
+
+function init_admin()
+{
+    echo '<h1>Swiftea</h1>';
+    echo '<h2>Drive research on your website!</h2>';
+
+    echo '<p>To add search functionality to your site, use this shortcode where you want to add the search form :</p>';
+    echo '<pre><code>[swiftea]</code></pre>';
+}
+
+// Search form shortcode
+
+function generate_shortcode($atts) {
+    $content = '
+    <form method="GET" action="https://swifteasearch.alwaysdata.net/internal-search-result" class="search-form">
+        <input type="search" name="q" placeholder="Your search" required class="search-field">
+        <input type="hidden" name="d" value="'. get_bloginfo('url') .'">
+        <button type="submit" class="search-submit">GO!</button>
+    </form>';
+    return $content;
+}
+
+add_shortcode('swiftea', 'generate_shortcode');
