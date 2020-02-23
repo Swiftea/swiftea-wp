@@ -1,2 +1,2 @@
 # swiftea-wp
-Wordpress Extension
+Swiftea - Wordpress Extension

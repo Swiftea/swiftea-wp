@@ -7,3 +7,5 @@
  * Author: Hugo Posnic, Nathan Seva
  * Author URI: https://swifteasearch.alwaysdata.net
  */
+
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
