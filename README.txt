@@ -7,7 +7,7 @@ Requires PHP: 7.0
 License: GPL V3
 License URI: https://github.com/Swiftea/swiftea-wp/blob/master/LICENSE
 
-Drive research on your website with our powerful & deep analysis tool!
+Drive research of your website with our powerful & deep analysis tool!
 
 == Installation ==
 Just install & activate the plugin, then use this shortcode where you want to add the search form:
