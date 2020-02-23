@@ -27,7 +27,7 @@ function init_admin()
     echo '<h1>Swiftea</h1>';
     echo '<h2>Drive research on your website!</h2>';
 
-    echo '<p>To add search functionality to your site, use this shortcode where you want to add the search form :</p>';
+    echo '<p>To add search functionality to your site, use this shortcode where you want to add the search form:</p>';
     echo '<pre><code>[swiftea]</code></pre>';
 }
 
