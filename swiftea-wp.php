@@ -14,14 +14,14 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 // Admin page
 
-add_action('admin_menu', 'setup_menu');
+add_action('admin_menu', 'swiftea_setup_menu');
 
-function setup_menu()
+function swiftea_setup_menu()
 {
-    add_menu_page('Swiftea', 'Swiftea', 'manage_options', 'swiftea', 'init_admin', plugin_dir_url( __FILE__ ) . 'assets/menu-icon.png');
+    add_menu_page('Swiftea', 'Swiftea', 'manage_options', 'swiftea', 'swiftea_init_admin', plugin_dir_url( __FILE__ ) . 'assets/menu-icon.png');
 }
 
-function init_admin()
+function swiftea_init_admin()
 {
     echo '<br><img src="' . plugin_dir_url( __FILE__ ) . 'assets/logo-112x35.png">';
     echo '<h1>Drive research of your website!</h1>';
@@ -33,7 +33,7 @@ function init_admin()
 
 // Search form shortcode
 
-function generate_shortcode($atts) {
+function swiftea_generate_form($atts) {
     $content = '
     <form method="GET" action="https://swifteasearch.alwaysdata.net/internal-search-result" class="search-form">
         <input type="search" name="q" placeholder="Your search" required class="search-field">
@@ -43,4 +43,4 @@ function generate_shortcode($atts) {
     return $content;
 }
 
-add_shortcode('swiftea', 'generate_shortcode');
+add_shortcode('swiftea', 'swiftea_generate_form');
