@@ -1,0 +1,43 @@
+#swiftea-results {
+	margin-top: 20px;
+	max-width: 600px;
+}
+
+#swiftea-results .result {
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+}
+
+#swiftea-results .result .result-title,
+#resswiftea-resultsults .result .result-description {
+	line-height: 1.4em;
+}
+
+#swiftea-results .result .result-title {
+	margin-bottom: 15px;
+}
+
+#swiftea-results .result .result-title a,
+#swiftea-results .result .result-title img {
+	vertical-align: middle;
+}
+
+#swiftea-results .result .result-title img {
+	display: inline-block;
+	max-height: 16px;
+}
+
+#swiftea-results .result .result-description {
+	margin-bottom: 10px;
+}
+
+#swiftea-results .result .result-url {
+	margin-bottom: 0;
+	color: #7c7c7c;
+}
+
+#swiftea-results .result:not(:last-child) {
+	margin-bottom: 20px;
+}
