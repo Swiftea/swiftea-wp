@@ -41,14 +41,6 @@ function swiftea_init_admin()
     echo '<pre><code>[swiftea_results]</code></pre>';
 }
 
-// Search form request
-
-add_action('admin_post_swiftea_search', 'swiftea_swiftea_search');
-
-function swiftea_swiftea_search() {
-    
-}
-
 // Search form results
 
 function swiftea_generate_results() {
